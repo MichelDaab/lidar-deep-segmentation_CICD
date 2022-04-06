@@ -52,7 +52,7 @@ def calc_entropy_stats(
 
     avg = np.average(e)
     deciles = np.quantile(e, q=deciles_q)
-    data["entropy"] = avg
+    # data["entropy"] = avg  # uncomment to prefer overriding.
 
     output_tif = os.path.join(output_dir, os.path.basename(las).replace(".las", ".tif"))
 
