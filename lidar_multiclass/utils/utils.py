@@ -1,8 +1,8 @@
 import logging
-import os
+import pathlib
 import time
 import warnings
-from typing import List, Sequence
+from typing import List, Sequence, TypeVar
 
 import pytorch_lightning as pl
 import rich.syntax
@@ -10,6 +10,10 @@ import rich.tree
 from omegaconf import DictConfig, OmegaConf
 from pytorch_lightning.utilities import rank_zero_only
 import torch
+
+
+# TODO: change all "str" to this object in typing.
+PathLike = TypeVar("PathLike", str, pathlib.Path, None)
 
 
 def get_logger(name=__name__) -> logging.Logger:
@@ -176,3 +180,4 @@ def define_device_from_config_param(gpus_param):
         else (torch.device("cuda") if gpus_param == 1 else f"cuda:{int(gpus_param[0])}")
     )
     return device
+
