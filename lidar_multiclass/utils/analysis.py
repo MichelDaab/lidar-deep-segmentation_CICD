@@ -1,5 +1,6 @@
 """Utilities to analyse point cloud data post-prediction"""
 
+import glob
 import os
 import sys
 from typing import List, Tuple
@@ -65,5 +66,5 @@ def summarize_entropies(
 
 
 # For now this analysis is hardoced. After delivery, clean and document everything in a specific script.
-files = ["/var/data/cgaydon/data/temp/batch_6_predicted/893000_6557000.las"]
+files = glob.glob("/var/data/cgaydon/data/temp/batch_6_predicted/89300*.las")
 print(calc_entropy_stats(files))
