@@ -27,7 +27,7 @@ jobs:
     - name: Full module run on LAS subset
       run: docker run -v /var/data/CICD_github_assets:/CICD_github_assets lidar_deep_im 
       # sudo mount -v -t cifs -o user=mdaab,domain=IGN,uid=24213,gid=10550 //store.ign.fr/store-lidarhd/projet-LHD/IA/Validation_Module/CICD_github_assets/B2V0.5 /var/data/CICD_github_assets
-    #
+    ##
     # - name: Evaluate decisions using optimization code on a single, corrected LAS 
     #   run: >
     #     docker run -v /var/data/cicd/CICD_github_assets:/CICD_github_assets lidar_deep_im
