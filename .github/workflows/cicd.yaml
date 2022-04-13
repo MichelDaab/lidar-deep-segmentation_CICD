@@ -4,9 +4,7 @@ name: CICD
 #   pull_request:
 #     branches: [main]
 
-on: 
-  push:
-    branches: [test_fork]
+on: push
 
 jobs:
   lidar_on_docker:
